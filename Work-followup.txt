@@ -10,3 +10,6 @@ Aastha - 6/11/23 and 7/11/23
 
 Aastha - 7/11/23
     -> Sign-up page created (1:58:10)
+
+Himanshu - 7/11/23
+    -> Created the running backend express server (44:58 - 54:00)
