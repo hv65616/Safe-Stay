@@ -7,3 +7,6 @@ Aastha - 6/11/23 and 7/11/23
     -> install router-dom
     -> Add routers
     -> Header created (time stamp : 44:55)
+
+Aastha - 7/11/23
+    -> Sign-up page created (1:58:10)
