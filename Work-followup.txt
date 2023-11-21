@@ -20,3 +20,6 @@ Aastha - 18/11/23
 Himanshu - 18/11/23
     -> Connection to mongo database successfully implemented (54:38 - 01:05:00)
     -> User Model Crearted (01:05:00 - 01:12:00)
+
+Himanshu - 21/11/23
+    -> Created SingUp API Route
