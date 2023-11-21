@@ -16,6 +16,7 @@ Himanshu - 7/11/23
 
 Aastha - 18/11/23
     -> Website's header signature font changed
+    -> Sign In page UI created 
 
 Himanshu - 18/11/23
     -> Connection to mongo database successfully implemented (54:38 - 01:05:00)
