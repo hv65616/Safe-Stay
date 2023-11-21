@@ -23,3 +23,4 @@ Himanshu - 18/11/23
 
 Himanshu - 21/11/23
     -> Created SingUp API Route
+    -> Created middleware for error handling (01:12:25 - 01:40:28)
