@@ -26,3 +26,7 @@ Himanshu - 21/11/23
     -> Created SingUp API Route(01:12:25 - 01:40:27)
     -> Created middleware for error handling (01:40:28-01:50:02)
     -> SignUp page functionality (1:58:10-01:58:55 )
+
+Himanshu - 22/11/23
+    -> Signin API Route implemented (02:15:00 - 02:33:00)
+    -> Signin page functionality implemented (02:33:00 - 02:38:00)
