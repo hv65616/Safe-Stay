@@ -30,3 +30,8 @@ Himanshu - 21/11/23
 Himanshu - 22/11/23
     -> Signin API Route implemented (02:15:00 - 02:33:00)
     -> Signin page functionality implemented (02:33:00 - 02:38:00)
+
+Aastha - 23/11/23
+    -> Add Redux Toolkit (02:38:51:02:53:26)
+    -> install Redux Toolkit Dependency
+
