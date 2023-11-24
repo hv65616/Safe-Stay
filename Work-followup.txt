@@ -34,4 +34,6 @@ Himanshu - 22/11/23
 Aastha - 23/11/23
     -> Add Redux Toolkit (02:38:51:02:53:26)
     -> install Redux Toolkit Dependency
+    -> install redux-persist
+    -> Redux-Persist Added (02:53:27 : 03:00:00)
 
