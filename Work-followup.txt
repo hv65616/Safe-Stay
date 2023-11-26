@@ -37,3 +37,6 @@ Aastha - 23/11/23
     -> install redux-persist
     -> Redux-Persist Added (02:53:27 : 03:00:00)
 
+Himanshu - 26/11/23
+    -> Google Auth Completed (03:00:00 - 03:28:00)
+
