@@ -43,4 +43,5 @@ Himanshu - 26/11/23
 Aastha - 27/11/23
     -> header updated (03:27:54 - 03:36:08)
     -> new private profile component added
+    -> Profile page UI Updated (03:36:09 - 03:43:57)
 
