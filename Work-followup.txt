@@ -44,3 +44,5 @@ Aastha - 27/11/23
     -> header updated (03:27:54 - 03:36:08)
     -> new private profile component added
 
+Himanshu - 28/11/23
+    -> image upload functionality (03:44:00 - 04:11:00)
