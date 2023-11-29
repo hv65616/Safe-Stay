@@ -43,6 +43,9 @@ Himanshu - 26/11/23
 Aastha - 27/11/23
     -> header updated (03:27:54 - 03:36:08)
     -> new private profile component added
+    -> Profile page UI Updated (03:36:09 - 03:43:57)
+    -> Profile Image upload functionality (03:43:58 : 03:47:08)
+    (From here you have to make security changes in firebase)
 
 Himanshu - 28/11/23
     -> image upload functionality (03:44:00 - 04:11:00)
