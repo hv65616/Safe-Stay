@@ -49,8 +49,9 @@ export const google = async (req, res, next) => {
       const token = jwt.sign({ id: user._id }, process.env.JWTSECRET);
       const { password: pass, ...rest } = user._doc;
       res
-        .cookie("access-token", token, {
+        .cookie("access_token", token, {
           httpOnly: true,
+          expires: new Date(Date.now() + 24 * 60 * 60),
         })
         .status(200)
         .json(rest);
@@ -61,7 +62,7 @@ export const google = async (req, res, next) => {
       const hashedPassword = bcrypt.hashSync(generatedpassword, 10);
       const newuser = new User({
         username:
-          req.body.name.split(' ').join('').toLowerCase() +
+          req.body.name.split(" ").join("").toLowerCase() +
           Math.random().toString(36).slice(-8),
         email: req.body.email,
         password: hashedPassword,
@@ -71,8 +72,9 @@ export const google = async (req, res, next) => {
       const token = jwt.sign({ id: newuser._id }, process.env.JWTSECRET);
       const { password: pass, ...rest } = user._doc;
       res
-        .cookie("access-token", token, {
+        .cookie("access_token", token, {
           httpOnly: true,
+          expires: new Date(Date.now() + 24 * 60 * 60),
         })
         .status(200)
         .json(rest);
