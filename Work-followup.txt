@@ -46,3 +46,6 @@ Aastha - 27/11/23
 
 Himanshu - 28/11/23
     -> image upload functionality (03:44:00 - 04:11:00)
+
+Himanshu - 29/11/23
+    -> Update user route and api
