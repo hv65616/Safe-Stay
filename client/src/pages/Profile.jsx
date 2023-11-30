@@ -10,8 +10,11 @@ import { app } from "../firebase";
 import { updateUserStart } from "../redux/user/userSlice";
 import { updateUserSuccess } from "../redux/user/userSlice";
 import { updateUserFailure } from "../redux/user/userSlice";
+import { deleteUserStart } from "../redux/user/userSlice";
+import { deleteUserSuccess } from "../redux/user/userSlice";
+import { deleteUserFailure } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 function Profile() {
   const { currentUser, loading, error } = useSelector((state) => state.user);
   const fileref = useRef(null);
@@ -79,6 +82,23 @@ function Profile() {
       dispatch(updateUserFailure(error.message));
     }
   };
+
+  const handledeleteuser = async () => {
+    try {
+      dispatch(deleteUserStart());
+      const res = await fetch(`/api/user/delete/${currentUser._id}`, {
+        method: "DELETE",
+      });
+      const data = await res.json();
+      if (data.success === false) {
+        dispatch(deleteUserFailure(data.message));
+        return;
+      }
+      dispatch(deleteUserSuccess(data));
+    } catch (error) {
+      dispatch(deleteUserFailure(error.message));
+    }
+  };
   return (
     <div className="p-3 max-w-lg mx-auto">
       <h1 className="text-3xl font-semibold text-center my-7">Profile</h1>
@@ -139,10 +159,20 @@ function Profile() {
         >
           {loading ? "Loading..." : "Update"}
         </button>
-        <Link className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95" to={"/create-listing"}>Create Listing</Link>
+        <Link
+          className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95"
+          to={"/create-listing"}
+        >
+          Create Listing
+        </Link>
       </form>
       <div className="flex justify-between mt-5">
-        <span className="text-red-700 cursor-pointer">Delete account</span>
+        <span
+          onClick={handledeleteuser}
+          className="text-red-700 cursor-pointer"
+        >
+          Delete account
+        </span>
         <span className="text-red-700 cursor-pointer">Sign out</span>
       </div>
       <p className="text-red-700 mt-5">{error ? error : ""}</p>
