@@ -69,4 +69,5 @@ Himanshu - 02/12/23
 
 Aastha - 04/12/2023
     -> Create listing UI Added (05:16:29 - 05:41:54)
-    -> Complete upload listing images functionality ( 05:41:55 - 05:41:54)
+    -> Complete upload listing images functionality ( 05:41:55 - 06:09:37)
+    -> Complete create listing page functionality (06:09:38 - 06:36:54)
