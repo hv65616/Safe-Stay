@@ -1,21 +1,10 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch  } from "react-redux";
 import { useRef, useState, useEffect } from "react";
-import {
-  getDownloadURL,
-  getStorage,
-  ref,
-  uploadBytesResumable,
-} from "firebase/storage";
+import {getDownloadURL,getStorage,ref,uploadBytesResumable,} from "firebase/storage";
 import { app } from "../firebase";
-import { updateUserStart } from "../redux/user/userSlice";
-import { updateUserSuccess } from "../redux/user/userSlice";
-import { updateUserFailure } from "../redux/user/userSlice";
-import { deleteUserStart } from "../redux/user/userSlice";
-import { deleteUserSuccess } from "../redux/user/userSlice";
-import { deleteUserFailure } from "../redux/user/userSlice";
-import { signOutUserStart } from "../redux/user/userSlice";
-import { useDispatch } from "react-redux";
+import { updateUserStart,updateUserSuccess ,updateUserFailure,deleteUserStart,deleteUserSuccess,deleteUserFailure,signOutUserStart} from "../redux/user/userSlice";
 import { Link } from "react-router-dom";
+
 // import listing from "../../../api/models/listing.model";
 function Profile() {
   const { currentUser, loading, error } = useSelector((state) => state.user);
