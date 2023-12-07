@@ -67,10 +67,13 @@ Himanshu - 30/11/23
 Himanshu - 02/12/23
     ->Working on create get user listing api route (06:36:00 - 06:44:38)
 
-Aastha - 04/12/2023
+Aastha - 04/12/2023 - 06/12/2023
     -> Create listing UI Added (05:16:29 - 05:41:54)
     -> Complete upload listing images functionality ( 05:41:55 - 06:09:37)
     -> Complete create listing page functionality (06:09:38 - 06:36:54)
 
 Himanshu - 06/12/2023
     ->Complete show user listsing functionality (06:44:38 - 07:00:00)
+
+Aastha - 07/12/2023
+    -> Complete delete user listing functionality (07:00:06  - )
