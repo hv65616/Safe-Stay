@@ -76,4 +76,4 @@ Himanshu - 06/12/2023
     ->Complete show user listsing functionality (06:44:38 - 07:00:00)
 
 Aastha - 07/12/2023
-    -> Complete delete user listing functionality (07:00:06  - )
+    -> Complete delete user listing functionality (07:00:06  - 07:09:13)
