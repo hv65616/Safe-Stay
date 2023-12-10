@@ -96,3 +96,5 @@ Aastha - 10/12/2023
     -> New component created i.e. Contact.jsx
     -> Add contact landlord functionality to the listing page (08:05:10 - 08:27:52 )
 
+Himanshu - 10/12/2023
+    -> Created the search API Route (08:27:52 - 08:45:00)
