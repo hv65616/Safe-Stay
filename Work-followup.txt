@@ -93,4 +93,6 @@ Aastha - 09/12/2023
 
 Aastha - 10/12/2023
     -> Complete listing page (07:52:34 - 08:05:09)
+    -> New component created i.e. Contact.jsx
+    -> Add contact landlord functionality to the listing page (08:05:10 - 08:27:52 )
 
