@@ -89,5 +89,8 @@ Aastha - 08/12/2023
 
 Aastha - 09/12/2023
     -> cd client and npm i swiper
-    -> Add image slider to the listing page (07:41:57 - )
+    -> Add image slider to the listing page (07:41:57 - 07:52:33)
+
+Aastha - 10/12/2023
+    -> Complete listing page (07:52:34 - 08:05:09)
 
