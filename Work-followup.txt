@@ -105,4 +105,8 @@ Aastha - 13/12/2023
     -> Add onChange and onSubmit functionality to the search page(09:09:43 - 09:33:28)
     -> Create the listing item component and show listings (09:33:29 - 10:05:19)
         -> npm install in client side - to install tailwind css line clamp
+
+Aastha - 14/12/2023
+    -> Add show more listings functionality (10:05:20 - 10:13:59)
+    
     
