@@ -15,7 +15,7 @@ export default function Search() {
     });
     const [loading,setLoading] = useState(false);
     const [listings,setListings] = useState([]);
-    console.log(listings)
+    const [showMore,setShowMore] = useState(false);
     useEffect(() => {
         const urlParams = new URLSearchParams(location.search);
         const searchTechFromUrl = urlParams.get('searchTerm');
@@ -50,9 +50,15 @@ export default function Search() {
 
         const fetchListing = async () => {
             setLoading(true);
+            setShowMore(false)
             const searchQuery = urlParams.toString();
             const res  =  await fetch(`/api/listing/get/?${searchQuery}`)
             const data = await res.json();
+            if (data.length > 8) {
+                setShowMore(true);
+            }else{
+                setShowMore(false)
+            }
             setListings(data);
             setLoading(false);
         };
@@ -92,11 +98,25 @@ export default function Search() {
         navigate(`/search?${searchQuery}`)
 
     }
+
+    const onShowMoreClick = async () => {
+        const numberOfListings = listings.length
+        const startIndex = numberOfListings
+        const urlParams = new URLSearchParams(location.search);
+        urlParams.set('startIndex',startIndex)
+        const searchQuery = urlParams.toString();
+        const res = await fetch(`api/listing/get?${searchQuery}`)
+        const data = await res.json()
+        if (data.length < 9 ){
+            setShowMore(false)
+        }
+        setListings([...listings,...data]);
+    }
   return (
     <div className='flex flex-col md:flex-row'>
 
         {/* Left side div for Search type */}
-        <div className='p-7 border-b-2 md:border-r-2 md:min-h-screen'>
+        <div className='p-7 border-b-2  md:w-1/2 md:border-r-2 md:min-h-screen '>
             <form onSubmit={handleSubmit} className='flex flex-col gap-8 '>
                 {/* Search term and search bar */}
                 <div className='flex items-center gap-2'> 
@@ -150,7 +170,7 @@ export default function Search() {
             </form>
         </div>
 
-        {/* Right side div for the lid-sting result */}
+        {/* Right side div for the listing result */}
         <div className='p-7 flex flex-col'>
             <h1 className='text-3xl font-semibold border-b p-2 text-slate-700 mt-5 md:mt-0'>Listing results : </h1>
             <div className='p-7 flex flex-wrap gap-4'>
@@ -161,8 +181,11 @@ export default function Search() {
                     <p className='text-xl text-slate-700 text-center w-full'>Loading...</p>
                 )}
                 {
-                  !loading && listings && listings.map((listing) => <ListingItem key={listing._id} listing={listing}></ListingItem>)
+                !loading && listings && listings.map((listing) => <ListingItem key={listing._id} listing={listing}></ListingItem>)
                 }
+                {showMore && (
+                    <button onClick={onShowMoreClick} className='text-green-700 hover:underline p-7 text-center w-full'>Show more</button>
+                )}
             </div>
         </div>
     </div>
