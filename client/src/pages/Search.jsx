@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {useNavigate} from 'react-router-dom'
+import ListingItem from '../components/ListingItem';
 
 export default function Search() {
     const navigate = useNavigate();
@@ -150,8 +151,19 @@ export default function Search() {
         </div>
 
         {/* Right side div for the lid-sting result */}
-        <div className='p-7'>
+        <div className='p-7 flex flex-col'>
             <h1 className='text-3xl font-semibold border-b p-2 text-slate-700 mt-5 md:mt-0'>Listing results : </h1>
+            <div className='p-7 flex flex-wrap gap-4'>
+                {!loading && listings.length === 0 && (
+                    <p className='text-xl text-slate-700 '>No listing found !!</p>
+                )}
+                {loading && (
+                    <p className='text-xl text-slate-700 text-center w-full'>Loading...</p>
+                )}
+                {
+                  !loading && listings && listings.map((listing) => <ListingItem key={listing._id} listing={listing}></ListingItem>)
+                }
+            </div>
         </div>
     </div>
   )

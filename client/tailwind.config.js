@@ -10,6 +10,9 @@ export default {
       logo: ["Pacifico"],
   },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+    // ...
+  ],
 }
 
