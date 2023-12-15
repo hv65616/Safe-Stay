@@ -110,6 +110,9 @@ Aastha - 14/12/2023
     -> Add show more listings functionality (10:05:20 - 10:13:59)
     -> Complete Home page (10:14:00 - 10:39:03)
     -> Complete About page (10:39:04 - 10:42:10 )
+
+Aastha - 15/12/2023
+    -> Home page redirecting link changes done 
     
     
     
